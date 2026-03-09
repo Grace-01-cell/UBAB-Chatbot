@@ -1,0 +1,29 @@
+# Python virtual environments
+backend/.test/
+backend/.venv/
+backend/venv/
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Frontend
+node_modules/
+dist/
+build/
+
+# Environment files
+.env
+.env.*
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.env
+.env.*
+backend/.env
