@@ -12,7 +12,8 @@ DATA_DIR = BASE_DIR / "data"
 VECTOR_DIR = DATA_DIR / "vectorstore" / "chroma"
 
 COLLECTION_NAME = "sop_chunks_local"
-EMBED_MODEL_NAME = "all-MiniLM-L6-v2"
+#EMBED_MODEL_NAME = "all-MiniLM-L6-v2"
+EMBED_MODEL_NAME = str(BASE_DIR / "models" / "all-MiniLM-L6-v2")
 
 
 # Load embedding model once

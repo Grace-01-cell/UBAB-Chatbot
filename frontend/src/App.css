@@ -373,13 +373,13 @@ body {
   background: #e5e7eb;
 }
 .composer {
-  min-height: 92px;
+  min-height: 1px;
   border-top: 1px solid #e2e8f0;
   background: #ffffff;
   padding: 14px 20px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .composer-input {
@@ -398,11 +398,11 @@ body {
 }
 
 .composer-icon-btn {
-  width: 48px;
-  height: 48px;
+  width: px;
+  height: 5px;
   border: none;
-  border-radius: 14px;
-  background: #f3f4f6;
+  border-radius: 10px;
+  background: #f3f4f5;
   color: #4b5563;
   display: flex;
   align-items: center;
@@ -412,7 +412,7 @@ body {
 }
 
 .composer-icon-btn:hover {
-  background: #e5e7eb;
+  background: #4273d5;
 }
 
 .composer-icon-btn.listening {

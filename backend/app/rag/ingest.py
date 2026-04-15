@@ -18,12 +18,13 @@ PROCESSED_DIR = DATA_DIR / "processed"
 VECTOR_DIR = DATA_DIR / "vectorstore" / "chroma"
 
 COLLECTION_NAME = "sop_chunks_local"
-EMBED_MODEL_NAME = "all-MiniLM-L6-v2"
+#EMBED_MODEL_NAME = "all-MiniLM-L6-v2"
+EMBED_MODEL_NAME = str(BASE_DIR / "models" / "all-MiniLM-L6-v2")
 
 CHUNK_CHARS = 1400
 OVERLAP_CHARS = 200
 BATCH_SIZE = 64
-RESET_COLLECTION = True   # Rebuild cleanly for MVP
+RESET_COLLECTION = False   # Rebuild cleanly for MVP
 
 
 def chunk_text(text: str, chunk_chars: int = CHUNK_CHARS, overlap_chars: int = OVERLAP_CHARS):
