@@ -9,6 +9,7 @@ type SidebarProps = {
   activeSessionId: string | null;
   onNewChat: () => void;
   onSelectSession: (id: string) => void;
+  onDeleteSession: (id: string) => void;
 };
 
 export default function Sidebar({
@@ -16,6 +17,7 @@ export default function Sidebar({
   activeSessionId,
   onNewChat,
   onSelectSession,
+  onDeleteSession,
 }: SidebarProps) {
   return (
     <aside className="sidebar">
@@ -31,16 +33,27 @@ export default function Sidebar({
         )}
 
         {sessions.map((session) => (
-          <button
+          <div
             key={session.id}
-            className={`session-item ${
-              session.id === activeSessionId ? "active" : ""
-            }`}
-            onClick={() => onSelectSession(session.id)}
+            className={`session-item ${session.id === activeSessionId ? "active" : ""}`}
           >
-            <div className="session-title">{session.title || "Untitled chat"}</div>
-            <div className="session-preview">{session.preview}</div>
-          </button>
+            <button
+              className="session-main"
+              onClick={() => onSelectSession(session.id)}
+            >
+              <div className="session-title">{session.title || "Untitled chat"}</div>
+              <div className="session-preview">{session.preview}</div>
+            </button>
+
+            <button
+              className="session-delete-btn"
+              onClick={() => onDeleteSession(session.id)}
+              title="Delete chat"
+              type="button"
+            >
+              ×
+            </button>
+          </div>
         ))}
       </div>
     </aside>
